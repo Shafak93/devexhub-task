@@ -1,13 +1,15 @@
 <script setup>
+import Header from './components/Header.vue';
+import Sidebar from './components/Sidebar.vue';
 </script>
 
 <template>
   <header>
-
+    <Header />
   </header>
 
-  <main>
-
+  <main class="flex">
+    <Sidebar />
   </main>
 </template>
 
