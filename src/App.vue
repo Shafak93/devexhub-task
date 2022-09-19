@@ -1,5 +1,6 @@
 <script setup>
 import Header from './components/Header.vue';
+import MainContent from './components/MainContent.vue';
 import Sidebar from './components/Sidebar.vue';
 </script>
 
@@ -11,7 +12,7 @@ import Sidebar from './components/Sidebar.vue';
   <main class="flex">
     <Sidebar />
     <aside class="flex-1">
-
+      <MainContent />
     </aside>
   </main>
 </template>

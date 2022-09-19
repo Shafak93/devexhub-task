@@ -1,5 +1,5 @@
 <template>
-    <div class="w-64 bg-gray-1 min-h-screen shadow-lg border rounded-tr-3xl absolute top-0">
+    <div class="w-64 bg-gray-1 min-h-screen shadow-lg border rounded-tr-3xl relative -top-14">
         <div class="menu  left-20 flex justify-around items-center">
             <span class="menuicon">
                 <font-awesome-icon icon="fa-solid fa-house-chimney " class="fabIcon text-white-1  " />
@@ -8,14 +8,19 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+
+}
+</script>
 <style>
 .menu {
+    background-color: #393E46;
+    height: 50px;
+    left: 100px;
+    padding-right: 20px;
     position: absolute;
     top: 199px;
-    left: 100px;
-    height: 50px;
-    padding-right: 20px;
-    background-color: #393E46;
 }
 
 .menuicon {
