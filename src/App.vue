@@ -10,6 +10,9 @@ import Sidebar from './components/Sidebar.vue';
 
   <main class="flex">
     <Sidebar />
+    <aside class="flex-1">
+
+    </aside>
   </main>
 </template>
 

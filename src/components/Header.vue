@@ -3,7 +3,7 @@
         <span class="icon mr-2">
             <font-awesome-icon icon="fa-solid fa-user" class="p-2 border rounded-full bg-red text-gray-1" />
         </span>
-        <h1 class="text-white-1 pr-7 text-xl">
+        <h1 class="text-white-1 pr-7 text-xl font-semibold">
             Demo User
         </h1>
     </div>
