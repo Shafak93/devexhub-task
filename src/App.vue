@@ -1,7 +1,6 @@
 <script setup>
 import Header from './components/Header.vue';
 import MainContent from './components/MainContent.vue';
-import Sidebar from './components/Sidebar.vue';
 </script>
 
 <template>
@@ -10,38 +9,62 @@ import Sidebar from './components/Sidebar.vue';
   </header>
 
   <main class="flex">
-    <Sidebar />
-    <aside class="flex-1">
+    <!--Sidebar  -->
+    <div>
+      <div class="w-64 bg-gray-1 h-screen shadow-lg border rounded-tr-3xl relative -top-14">
+        <div @mouseover="hover = true" class="menu  left-20 flex justify-around items-center">
+          <span class="menuicon">
+            <font-awesome-icon icon="fa-solid fa-house-chimney " class="fabIcon text-white-1  " />
+          </span>
+          <a class="text-white-1" href="">Home</a>
+        </div>
+      </div>
+    </div>
+    <aside v-if="hover" class="flex-1">
       <MainContent />
     </aside>
   </main>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      hover: false
+    }
+  }
+}
+</script>
 
 <style scoped>
-/* header {
-  line-height: 1.5;
+.menu {
+  background-color: #393E46;
+  height: 50px;
+  left: 100px;
+  padding-right: 20px;
+  position: absolute;
+  top: 199px;
+  border-radius: 0 -50% -50% 0;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.menuicon {
+  position: absolute;
+  left: -30px;
+  width: 50px;
+  height: 50px;
+  background-color: #9B0000;
+  border-radius: 50%;
+
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.fabIcon {
+  width: 30px;
+  height: 26px;
+  padding: 12px 10px;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-} */
+a {
+  font-size: 25px;
+  padding-left: 50px;
+  padding-right: 38px;
+}
 </style>
